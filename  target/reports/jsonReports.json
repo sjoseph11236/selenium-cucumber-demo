@@ -1,0 +1,82 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-11-05T16:18:10.163Z",
+        "line": 3,
+        "name": "check login is successful with valid credentials.",
+        "description": "",
+        "id": "login;check-login-is-successful-with-valid-credentials.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "broswer is open",
+            "match": {
+              "location": "steps.LoginSteps.testBroswerIsOpen()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on login page",
+            "match": {
+              "location": "steps.LoginSteps.testUserIsOnLoginPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user enters username and password",
+            "match": {
+              "location": "steps.LoginSteps.testUserEntersUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks on login",
+            "match": {
+              "location": "steps.LoginSteps.testUserClicksOnLogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user is navigated to home page",
+            "match": {
+              "location": "steps.LoginSteps.testUserIsNavigatedToHomePage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": []
+  }
+]
