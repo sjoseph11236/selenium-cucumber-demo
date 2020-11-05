@@ -14,21 +14,21 @@ public class LoginSteps {
 //ARRANGE
 //    - setup
 //    - creating objects to be used in test
-//    - fetching data you need for
+//    - fetching data you need for test
     WebDriver driver;
     LoginPage login;
-    @Given("broswer is open")
-    public void testBroswerIsOpen() {
+    @Given("browser is open")
+    public void testBrowserIsOpen() {
         System.setProperty("webdriver.chrome.driver", "/Users/sayeedjoseph/selenium/chromedriver");
         driver = new ChromeDriver();
 //        implicit waits
-//            - wait a specified amount of time before throwing an exception for each step.
+//            - wait for a specified amount of time before throwing an exception for each step.
 //        explicit waits
-//                - wait for specified amount of time for a specific element to appear on the browser
+//                - wait for a specified amount of time for a specific element to appear on the browser
 //                - deprecated
 //        fluent wait
 //            - specify to how long to wait
-//            -   specify the freq. to check when an element appears.
+//            - specify the freq. to check when an element appears.
 //            - ignore specific exceptions.
 //    to increase window size
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -40,6 +40,7 @@ public class LoginSteps {
         driver.get("https://example.testproject.io/web/");
         login = new LoginPage(driver);
     }
+
     // ACT
     @When("^user enters (.*) and (.*)$")
     public void testUserEntersUsernameAndPassword(String username, String password) {
@@ -51,6 +52,7 @@ public class LoginSteps {
     public void testUserClicksOnLogin() {
         login.clickLogin();
     }
+
     // ASSERT
     @Then("user is navigated to home page")
     public void testUserIsNavigatedToHomePage() {

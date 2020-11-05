@@ -5,8 +5,10 @@ import org.openqa.selenium.WebDriver;
 
 //AUT - Application Under Test
 //SUT - System Under Test
+//being tested for correct operation.
 public class LoginPage {
 //    Access modifier that limits the scope of the field to the class and subclasses within the package.
+//    A subclass uses the extends keyword.
     protected  WebDriver driver;
 
     private By txt_username = By.id("name");
